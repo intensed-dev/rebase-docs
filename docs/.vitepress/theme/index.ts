@@ -1,7 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import PluginCard from './components/PluginCard.vue'
 import HomeSection from './components/HomeSection.vue'
-import './custom.css'
+import '../custom.css'
 
 export default {
   extends: DefaultTheme,
