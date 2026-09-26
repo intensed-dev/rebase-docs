@@ -2,50 +2,46 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: 'en-US',
-
-  title: ' ',
-  description: ' ',
-
+  title: 'Rebase',
+  description: 'JavaScript-first enhancement layer for the web.',
   base: '/rebase/',
-
   cleanUrls: true,
 
   themeConfig: {
-    logo: 'https://raw.githubusercontent.com/js-rebase/branding/207e009036453b4f367a1ba9d8925361571153a0/assets/full_logo.svg',
-
     nav: [
-      {
-        text: 'JS.ORG',
-        link: 'https://rebase.js.org'
-      },
-      {
-        text: 'GitHub',
-        link: 'https://github.com/js-rebase/code'
-      },
-      {
-        text: 'Source',
-        link: 'https://github.com/js-rebase/rebase'
-      }
+      { text: 'Guide', link: '/getting-started' },
+      { text: 'Plugins', link: '/plugins/creating-plugins' },
+      { text: 'GitHub', link: 'https://github.com/intensed-dev/code' }
     ],
 
     sidebar: [
       {
-        text: 'Rebase Documentation',
+        text: 'Introduction',
         items: [
-          //{text:"",link:""}
+          { text: 'What is Rebase?', link: '/concepts/what-is-rebase' },
+          { text: 'Why Rebase?', link: '/concepts/why-rebase' },
+          { text: 'How it works', link: '/concepts/how-it-works' },
+          { text: 'Getting started', link: '/getting-started' }
+        ]
+      },
+      {
+        text: 'Plugins',
+        items: [
+          { text: 'Creating plugins', link: '/plugins/creating-plugins' },
+          { text: 'Using plugins', link: '/plugins/using-plugins' }
+        ]
+      },
+      {
+        text: 'Tutorials',
+        items: [
+          { text: 'Date & time', link: '/tutorials/date' },
+          { text: 'Build a plugin', link: '/tutorials/custom-plugin' }
         ]
       }
     ],
 
     socialLinks: [
-      {
-        icon: 'github',
-        link: 'https://github.com/js-rebase'
-      },
-      {
-        icon: 'javascript',
-        link: 'https://rebase.js.org'
-      }
+      { icon: 'github', link: 'https://github.com/intensed-dev/code' }
     ],
 
     search: {
@@ -53,12 +49,12 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/js-rebase/rebase/edit/main/docs/:path',
+      pattern: 'https://github.com/intensed-dev/rebase-docs/edit/main/docs/:path',
       text: 'Edit this page'
     },
 
     footer: {
-      message: 'Made by the Rebase Team',
+      message: 'Rebase Documentation',
       copyright: 'Copyright © 2026 Rebase'
     }
   }

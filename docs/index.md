@@ -3,39 +3,56 @@ layout: home
 
 hero:
   name: Rebase
-  logo: https://raw.githubusercontent.com/js-rebase/branding/207e009036453b4f367a1ba9d8925361571153a0/assets/brackets.svg
-  icon: https://raw.githubusercontent.com/js-rebase/branding/207e009036453b4f367a1ba9d8925361571153a0/assets/brackets.svg
-  text: <Badge type="tip" text="Now in Beta!" />
-  tagline: JavaScript-first Web Framework
+  text: A JavaScript-first enhancement layer for the web.
+  tagline: Add opt-in syntax and behavior to existing web projects without replacing your stack.
   actions:
     - theme: brand
       text: Get Started
       link: /getting-started
     - theme: alt
-      text: GitHub
-      link: https://github.com/js-rebase
+      text: How it works
+      link: /concepts/how-it-works
     - theme: alt
-      text: Source
-      link: https://github.com/js-rebase/rebase
+      text: GitHub
+      link: https://github.com/intensed-dev/code
 
 features:
-  - title: Fast & Easy
-    icon: 🚀
-    details: Rebase is fast and easy to use, perfect for beginners and professional devs.
-
-  - title: Community-driven
-    icon: 👥
-    details: Rebase is completely driven by the community, for the community.
-
+  - title: Non-invasive
+    details: Rebase only processes syntax registered by the active Rebase instance. Existing framework syntax stays in control.
   - title: JavaScript-first
-    icon: ⚡️
-    details: The Compiler is completely built using JavaScript, which means that it works 100% in every browser.
-
-  - title: Open-Source
-    icon: 🗂️
-    details: Rebase is open-source, so you can view, edit and even fork Rebase's code and help it grow & improve!
-
-  - title: Brand New!
-    icon: 🐣
-    details: Rebase is a completely new, work-in-progress project, using the newest technology and focussing on modern development.
+    details: The runtime and plugin API are written in JavaScript and can be used directly from web applications.
+  - title: Plugin-based
+    details: Features are opt-in. Dates, icons, localization and other capabilities can live in independent plugins.
+  - title: Framework-friendly
+    details: Rebase can run alongside HTML, Svelte, Vue, React and other stacks through host-aware adapters.
+  - title: Small core
+    details: The core focuses on parsing registered extensions, rendering them and providing a predictable plugin API.
+  - title: Open source
+    details: Rebase is developed openly and is designed to be extended by both official and community plugins.
 ---
+
+## Rebase in one sentence
+
+**Rebase adds an explicit extension layer to web markup.**
+
+Instead of building another complete UI framework, Rebase lets applications register small pieces of syntax and behavior:
+
+~~~html
+{@date as DD.MM.YYYY}
+
+{#feature}
+  <p>Plugin-provided content.</p>
+{/feature}
+~~~
+
+The important part is that these names are not magically reserved by Rebase. A Rebase instance only owns syntax that has been registered with it.
+
+## Start here
+
+- [What is Rebase?](/concepts/what-is-rebase)
+- [Why use Rebase?](/concepts/why-rebase)
+- [How it works](/concepts/how-it-works)
+- [Getting started](/getting-started)
+- [Creating plugins](/plugins/creating-plugins)
+- [Using plugins](/plugins/using-plugins)
+- [Plugin tutorials](/tutorials/date)
