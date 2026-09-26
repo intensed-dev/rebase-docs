@@ -27,26 +27,30 @@ features:
     details: The core focuses on syntax registration, transformation, mounting and a predictable plugin API.
 ---
 
-<HomeSection eyebrow="THE IDEA" title="Small extensions. Shared syntax." description="Rebase gives reusable web features a common extension point.">
-  <div class="home-copy">
-    <p>A date formatter, icon system or project-specific directive does not need to become a framework. Register it with Rebase and keep it as an independent plugin.</p>
-    <div class="home-code">
-      <pre><code>const rebase = createRebase()
+<HomeSection
+  eyebrow="THE IDEA"
+  title="Small extensions. Shared syntax."
+  description="Rebase gives reusable web features a common extension point."
+/>
 
-rebase.use(date)
+<HomeSection
+  eyebrow="DEVELOPERS"
+  title="From first render to plugin development."
+  description="Follow the documentation from fundamentals through integrations and the API reference."
+/>
 
-await rebase.transform(
-  '{@date as DD.MM.YYYY}'
-)</code></pre>
-    </div>
-  </div>
-</HomeSection>
+[Get started](/introduction/getting-started) · [Learn the architecture](/guide/overview) · [Find plugins](/plugins/) · [Read the reference](/reference/core)
 
-<HomeSection eyebrow="DEVELOPERS" title="From first render to plugin development." description="Follow the documentation from fundamentals through integrations and the API reference.">
-  <div class="home-links">
-    <a href="/introduction/getting-started"><strong>Get started</strong><span>Create an instance and render your first directive.</span></a>
-    <a href="/guide/overview"><strong>Learn the architecture</strong><span>Understand instances, registries, hosts and rendering.</span></a>
-    <a href="/plugins/"><strong>Find plugins</strong><span>Browse official and community extensions.</span></a>
-    <a href="/reference/core"><strong>Read the reference</strong><span>Build integrations against the public API.</span></a>
-  </div>
-</HomeSection>
+## A small extension layer
+
+A date formatter, icon system or project-specific directive does not need to become a framework.
+
+Register it with Rebase and keep it as an independent plugin:
+
+```js
+const rebase = createRebase();
+
+rebase.use(date);
+
+await rebase.transform("{@date as DD.MM.YYYY}");
+```
