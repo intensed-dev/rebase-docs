@@ -9,9 +9,18 @@ export default defineConfig({
 
   themeConfig: {
     nav: [
-      { text: 'Guide', link: '/getting-started' },
-      { text: 'Plugins', link: '/plugins/creating-plugins' },
-      { text: 'GitHub', link: 'https://github.com/intensed-dev/code' }
+      {
+        text: 'JS.ORG',
+        link: 'https://rebase.js.org'
+      },
+      {
+        text: 'GitHub',
+        link: 'https://github.com/js-rebase/code'
+      },
+      {
+        text: 'Source',
+        link: 'https://github.com/js-rebase/rebase'
+      }
     ],
 
     sidebar: [
@@ -41,7 +50,14 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/intensed-dev/code' }
+      {
+        icon: 'github',
+        link: 'https://github.com/js-rebase'
+      },
+      {
+        icon: 'javascript',
+        link: 'https://rebase.js.org'
+      }
     ],
 
     search: {
