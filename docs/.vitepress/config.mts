@@ -34,6 +34,14 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Developer Guide',
+        items: [
+          { text: 'Syntax', link: '/guide/syntax' },
+          { text: 'Architecture', link: '/guide/architecture' },
+          { text: 'API Reference', link: '/guide/api' }
+        ]
+      },
+      {
         text: 'Plugins',
         items: [
           { text: 'Creating plugins', link: '/plugins/creating-plugins' },
