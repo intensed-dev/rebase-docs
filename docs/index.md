@@ -8,41 +8,45 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /getting-started
+      link: /introduction/getting-started
     - theme: alt
-      text: How it works
-      link: /concepts/how-it-works
+      text: Explore Plugins
+      link: /plugins/
     - theme: alt
       text: GitHub
       link: https://github.com/intensed-dev/code
 
 features:
-  - title: Non-invasive
-    details: Rebase only processes syntax registered by the active Rebase instance. Existing framework syntax stays in control.
-  - title: JavaScript-first
-    details: The runtime and plugin API are written in JavaScript and can be used directly from web applications.
-  - title: Plugin-based
-    details: Features are opt-in. Dates, icons, localization and other capabilities can live in independent plugins.
-  - title: Framework-friendly
-    details: Rebase can run alongside HTML, Svelte, Vue, React and other stacks through host-aware adapters.
-  - title: Small core
-    details: The core focuses on parsing registered extensions, rendering them and providing a predictable plugin API.
-  - title: Open source
-    details: Rebase is developed openly and is designed to be extended by both official and community plugins.
+  - title: Explicit by design
+    details: A Rebase instance only processes syntax that has been registered. Unknown syntax stays untouched.
+  - title: Built to extend
+    details: Directives, blocks, expressions and hooks let plugins add focused capabilities without changing the core.
+  - title: Works with your stack
+    details: Rebase is an enhancement layer, not a replacement for Svelte, Vue, React or plain HTML.
+  - title: Small runtime
+    details: The core focuses on syntax registration, transformation, mounting and a predictable plugin API.
 ---
 
-## Rebase in one sentence
+<HomeSection eyebrow="THE IDEA" title="Small extensions. Shared syntax." description="Rebase gives reusable web features a common extension point.">
+  <div class="home-copy">
+    <p>A date formatter, icon system or project-specific directive does not need to become a framework. Register it with Rebase and keep it as an independent plugin.</p>
+    <div class="home-code">
+      <pre><code>const rebase = createRebase()
 
-**Rebase adds an explicit extension layer to web markup.**
+rebase.use(date)
 
-Instead of building another complete UI framework, Rebase lets applications register small pieces of syntax and behavior:
+await rebase.transform(
+  '&lt;time&gt;{@date as DD.MM.YYYY}&lt;/time&gt;'
+)</code></pre>
+    </div>
+  </div>
+</HomeSection>
 
-~~~html
-{@date as DD.MM.YYYY}
-
-{#feature}
-  <p>Plugin-provided content.</p>
-{/feature}
-~~~
-
-The important part is that these names are not magically reserved by Rebase. A Rebase instance only owns syntax that has been registered with it.
+<HomeSection eyebrow="DEVELOPERS" title="From first render to plugin development." description="Follow the documentation from fundamentals through integrations and the API reference.">
+  <div class="home-links">
+    <a href="/introduction/getting-started"><strong>Get started</strong><span>Create an instance and render your first directive.</span></a>
+    <a href="/guide/overview"><strong>Learn the architecture</strong><span>Understand instances, registries, hosts and rendering.</span></a>
+    <a href="/plugins/"><strong>Find plugins</strong><span>Browse official and community extensions.</span></a>
+    <a href="/reference/core"><strong>Read the reference</strong><span>Build integrations against the public API.</span></a>
+  </div>
+</HomeSection>
