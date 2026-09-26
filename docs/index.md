@@ -46,13 +46,3 @@ Instead of building another complete UI framework, Rebase lets applications regi
 ~~~
 
 The important part is that these names are not magically reserved by Rebase. A Rebase instance only owns syntax that has been registered with it.
-
-## Start here
-
-- [What is Rebase?](/concepts/what-is-rebase)
-- [Why use Rebase?](/concepts/why-rebase)
-- [How it works](/concepts/how-it-works)
-- [Getting started](/getting-started)
-- [Creating plugins](/plugins/creating-plugins)
-- [Using plugins](/plugins/using-plugins)
-- [Plugin tutorials](/tutorials/date)
