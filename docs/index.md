@@ -36,7 +36,7 @@ features:
 rebase.use(date)
 
 await rebase.transform(
-  '&lt;time&gt;{@date as DD.MM.YYYY}&lt;/time&gt;'
+  '{@date as DD.MM.YYYY}'
 )</code></pre>
     </div>
   </div>
