@@ -1,26 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-
-.inter-<uniquifier> {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
-.jetbrains-mono-<uniquifier> {
-  font-family: "JetBrains Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  /* Rebase Green */
-  --vp-c-brand-1: #BBEE11;
-  --vp-c-brand-2: #BBEE11;
-  --vp-c-brand-3: #BBEE11;
+  --vp-font-family-base: "Inter", system-ui, sans-serif;
+  --vp-font-family-mono: "JetBrains Mono", ui-monospace, monospace;
+  --vp-c-brand-1: #9bc900;
+  --vp-c-brand-2: #a9dc00;
+  --vp-c-brand-3: #bbee11;
+  --vp-c-brand-soft: rgba(187, 238, 17, 0.12);
+}
 
-  /* Fonts */
-  --vp-font-family-base: "Inter", Inter, sans-serif;
-  --vp-font-family-mono: "JetBrains Mono", JetBrains Mono, monospace;
+.VPHomeHero .name {
+  letter-spacing: -0.045em;
+}
+
+.VPHomeHero .text {
+  max-width: 760px;
+  letter-spacing: -0.025em;
+}
+
+.VPHomeFeatures .VPFeature {
+  border-radius: 16px;
+  transition: border-color .2s ease, transform .2s ease;
+}
+
+.VPHomeFeatures .VPFeature:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+}
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3 {
+  letter-spacing: -0.025em;
+}
+
+.vp-doc div[class*="language-"] {
+  border-radius: 12px;
+}
+
+.vp-doc code {
+  font-weight: 500;
+}
+
+.VPSidebar {
+  border-right-color: var(--vp-c-divider);
+}
+
+.dark {
+  --vp-c-brand-1: #bbee11;
+  --vp-c-brand-2: #bbee11;
+  --vp-c-brand-3: #d2f66a;
 }

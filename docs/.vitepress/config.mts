@@ -9,9 +9,18 @@ export default defineConfig({
 
   themeConfig: {
     nav: [
-      { text: 'Guide', link: '/getting-started' },
-      { text: 'Plugins', link: '/plugins/creating-plugins' },
-      { text: 'GitHub', link: 'https://github.com/intensed-dev/code' }
+      {
+        text: 'JS.ORG',
+        link: 'https://rebase.js.org'
+      },
+      {
+        text: 'GitHub',
+        link: 'https://github.com/js-rebase/code'
+      },
+      {
+        text: 'Source',
+        link: 'https://github.com/js-rebase/rebase'
+      }
     ],
 
     sidebar: [
@@ -22,6 +31,14 @@ export default defineConfig({
           { text: 'Why Rebase?', link: '/concepts/why-rebase' },
           { text: 'How it works', link: '/concepts/how-it-works' },
           { text: 'Getting started', link: '/getting-started' }
+        ]
+      },
+      {
+        text: 'Developer Guide',
+        items: [
+          { text: 'Syntax', link: '/guide/syntax' },
+          { text: 'Architecture', link: '/guide/architecture' },
+          { text: 'API Reference', link: '/guide/api' }
         ]
       },
       {
@@ -41,7 +58,14 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/intensed-dev/code' }
+      {
+        icon: 'github',
+        link: 'https://github.com/js-rebase'
+      },
+      {
+        icon: 'javascript',
+        link: 'https://rebase.js.org'
+      }
     ],
 
     search: {
