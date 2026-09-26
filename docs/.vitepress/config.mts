@@ -8,6 +8,8 @@ export default defineConfig({
   cleanUrls: true,
 
   themeConfig: {
+    logo: 'https://raw.githubusercontent.com/js-rebase/branding/207e009036453b4f367a1ba9d8925361571153a0/assets/full_logo.svg',
+
     nav: [
       {
         text: 'JS.ORG',
@@ -27,45 +29,72 @@ export default defineConfig({
       {
         text: 'Introduction',
         items: [
-          { text: 'What is Rebase?', link: '/concepts/what-is-rebase' },
-          { text: 'Why Rebase?', link: '/concepts/why-rebase' },
-          { text: 'How it works', link: '/concepts/how-it-works' },
-          { text: 'Getting started', link: '/getting-started' }
+          { text: 'Overview', link: '/introduction/overview' },
+          { text: 'Getting started', link: '/introduction/getting-started' },
+          { text: 'Why Rebase?', link: '/introduction/why-rebase' }
         ]
       },
       {
-        text: 'Developer Guide',
+        text: 'Guide',
         items: [
-          { text: 'Syntax', link: '/guide/syntax' },
-          { text: 'Architecture', link: '/guide/architecture' },
-          { text: 'API Reference', link: '/guide/api' }
+          { text: 'Core concepts', link: '/guide/overview' },
+          {
+            text: 'Syntax',
+            items: [
+              { text: 'Directives', link: '/guide/syntax/directives' },
+              { text: 'Blocks', link: '/guide/syntax/blocks' },
+              { text: 'Expressions', link: '/guide/syntax/expressions' },
+              { text: 'Escaping & HTML', link: '/guide/syntax/escaping' }
+            ]
+          },
+          {
+            text: 'Rendering',
+            items: [
+              { text: 'Transforming source', link: '/guide/rendering/transform' },
+              { text: 'Mounting', link: '/guide/rendering/mounting' },
+              { text: 'Hooks', link: '/guide/rendering/hooks' }
+            ]
+          }
         ]
       },
       {
         text: 'Plugins',
         items: [
-          { text: 'Creating plugins', link: '/plugins/creating-plugins' },
-          { text: 'Using plugins', link: '/plugins/using-plugins' }
+          { text: 'Overview', link: '/plugins/overview' },
+          { text: 'Directive plugins', link: '/plugins/directives' },
+          { text: 'Block plugins', link: '/plugins/blocks' },
+          { text: 'Publishing', link: '/plugins/publishing' }
+        ]
+      },
+      {
+        text: 'Integrations',
+        items: [
+          { text: 'Svelte', link: '/integrations/svelte' },
+          { text: 'Vue', link: '/integrations/vue' },
+          { text: 'React', link: '/integrations/react' }
+        ]
+      },
+      {
+        text: 'Reference',
+        items: [
+          { text: 'Core exports', link: '/reference/core' },
+          { text: 'Rebase instance', link: '/reference/rebase' },
+          { text: 'SyntaxRegistry', link: '/reference/syntax-registry' },
+          { text: 'Plugin API', link: '/reference/plugin-api' }
         ]
       },
       {
         text: 'Tutorials',
         items: [
           { text: 'Date & time', link: '/tutorials/date' },
-          { text: 'Build a plugin', link: '/tutorials/custom-plugin' }
+          { text: 'Build a plugin', link: '/tutorials/build-a-plugin' }
         ]
       }
     ],
 
     socialLinks: [
-      {
-        icon: 'github',
-        link: 'https://github.com/js-rebase'
-      },
-      {
-        icon: 'javascript',
-        link: 'https://rebase.js.org'
-      }
+      { icon: 'github', link: 'https://github.com/js-rebase' },
+      { icon: 'javascript', link: 'https://rebase.js.org' }
     ],
 
     search: {
@@ -73,12 +102,12 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/intensed-dev/rebase-docs/edit/main/docs/:path',
+      pattern: 'https://github.com/js-rebase/rebase-docs/edit/main/docs/:path',
       text: 'Edit this page'
     },
 
     footer: {
-      message: 'Rebase Documentation',
+      message: 'Made by the Rebase Team',
       copyright: 'Copyright © 2026 Rebase'
     }
   }
